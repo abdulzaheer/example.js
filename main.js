@@ -45,6 +45,83 @@
       //there is a standard way to store numbers is javascript
 
       //Here we'll figure out the maximum number javascript can hold
+      //notice no variables are used
+      //the Number.MAX_VALUE is part of the javascript library
       document.write("Max Num = ", Number.MAX_VALUE, "<br/>");
+
       //Here we'll figure out the minimum number javascript can hold.
+      //notice no variables are used
+      //the Number.MIN_VALUE is part of the javascript library
       document.write("Min Num = ", Number.MIN_VALUE, "<br/>");
+
+      // in Javascript numbers have 16 digits of precision
+      precisionTest = 0.1000000000000001;
+      document.write(precisionTest + 0.1000000000000001, "<br/>");
+
+      //if you go over 16 digits...things will get messed up
+      //here is what happens when we add another 0
+      //to the previous two statements.
+      precisionTest = 0.10000000000000001;
+      document.write(precisionTest + 0.10000000000000001, "<br/>");
+
+      //to round a number two decimal places use
+      // .toFixed(2)
+      var balance = 1563.87;
+      document.write("Monthly payment : $", (balance / 12).toFixed(2), "<br />");
+
+      //if three decimal places:
+      // .toFixed(3)
+      document.write("Monthly payment : $", (balance / 12).toFixed(3), "<br />");
+
+      // if four
+      // .toFixed(4)
+      document.write("Monthly payment : $", (balance / 12).toFixed(4), "<br />");
+
+      var randNum = 5;
+
+      //Here will will use the increment (++) operation
+      //to add 1 to the given number
+      //putting the ++ after the number add 1 after
+      document.write("randNum++ = ", randNum++, "<br/>");
+
+      //putting the ++ before adds the number before
+      document.write("++randNum = ", ++randNum, "<br/>");
+
+      //the same rules apply for decrement (--)
+      document.write("randNum-- = ", randNum--, "<br/>");
+      document.write("--randNum = ", --randNum, "<br/>");
+
+      /* (keep in mind: the randNum variable, in these examples,
+      is constantly being changed by each statement. So when you
+      look at the results on the document, be not deceived.) */
+
+      // These calculations assign their results to their own variables
+      //randNum += 5 means randNum = randNum + 5
+      document.write("randNum += 5 = ", randNum += 5, "<br/>");
+      //randNum -= 5 means randNum = randNum + 5
+      document.write("randNum -= 5 = ", randNum -= 5, "<br/>");
+      //randNum *= 5 means randNum = randNum + 5
+      document.write("randNum *= 5 = ", randNum *= 5, "<br/>");
+      //randNum /= 5 means randNum = randNum + 5
+      document.write("randNum /= 5 = ", randNum /= 5, "<br/>");
+
+      // These examples demonstrate the order of operations
+      document.write("3 + 2 * 5 = ", 3 + 2 * 5, "<br/>");
+      document.write("(3 + 2) * 5 = ", (3 + 2) * 5, "<br/>");
+
+      // these are the math properties and methods that
+      // javascript has available.
+      document.write("Math.E = ", Math.E, "<br/>");
+      document.write("Math.PI = ", Math.PI, "<br/>");
+      document.write("Math.abs(-8) = ", Math.abs(-8), "<br/>");
+      document.write("Math.cbrt(1000) = ", Math.cbrt(1000), "<br/>");
+      document.write("Math.ceil(6.45) = ", Math.ceil(6.45), "<br/>");
+      document.write("Math.floor(6.45) = ", Math.floor(6.45), "<br/>");
+      document.write("Math.round(6.45) = ", Math.round(6.45), "<br/>");
+      document.write("Math.log(10) = ", Math.log(10), "<br/>"); // Natural log
+      document.write("Math.log10(10) = ", Math.log10(10), "<br/>"); // Base 10 log
+      document.write("Math.max(10,5) = ", Math.max(10,5), "<br/>");
+      document.write("Math.min(10,5) = ", Math.min(10,5), "<br/>");
+      document.write("Math.pow(4,2) = ", Math.pow(4,2), "<br/>");
+      document.write("Math.sqrt(1000) = ", Math.sqrt(1000), "<br/>");
+      document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) + 1), ",br/>");
