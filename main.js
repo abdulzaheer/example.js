@@ -1,22 +1,21 @@
 
-      //variable is use the word var.
-      //a pop up requests info with the prompt()
-      /////////var yourName = prompt("What is your name?")
+      // You create variables that store values with var
+      // Prompt() opens a popup that requests info
+      var yourName = prompt("What is your name?")
 
-      //depending on the conditions, if performs differnt actions
-
-      //////////if(yourName != null){
+      //depending on the conditions, the if statement performs different actions
+      if(yourName != null){
 
         //the text is set in an HTML element with the id sayHello
         //concatenate(combine) strings with the + operator
-        //////////document.getElementById("sayHello").innerHTML = "Hello " + yourName;
-      ///////////} else {
+        document.getElementById("sayHello").innerHTML = "Hello " + yourName;
+      } else {
 
         //a poput opens with a message when we use the alert() function.
-        ///////////alert ("Please enter a name next time");
-      /////////////}
+        alert ("Please enter a name next time");
+      }
 
-      // VARIABLES!
+      //....VARIABLES!.....
       //variables can contain letter, numbers, underscores or $,
       //but cannot start with a number, or contain spaces
       //variables are case sensitive
@@ -28,7 +27,7 @@
       //because we are giving the variable new data
       myName = 100;
 
-      //MATH!
+      //....MATH!.....
       //the document.write() outputs the
       //data within the function to the browser.
       document.write("5 + 4 = " + (5 + 4) + "<br/>");
@@ -79,12 +78,12 @@
 
       var randNum = 5;
 
-      //Here will will use the increment (++) operation
+      //Here we will use the increment (++) operation
       //to add 1 to the given number
-      //putting the ++ after the number add 1 after
+      //putting the increment (++) after the number adds 1 after
       document.write("randNum++ = ", randNum++, "<br/>");
 
-      //putting the ++ before adds the number before
+      //putting the decrement (++) before the number adds 1 before the variable
       document.write("++randNum = ", ++randNum, "<br/>");
 
       //the same rules apply for decrement (--)
@@ -109,19 +108,74 @@
       document.write("3 + 2 * 5 = ", 3 + 2 * 5, "<br/>");
       document.write("(3 + 2) * 5 = ", (3 + 2) * 5, "<br/>");
 
-      // these are the math properties and methods that
-      // javascript has available.
+      // These are the math properties and methods that are
+      // built inside of javascript
+      //The Math object allows you to perform
+      //mathematical tasks on numbers.
       document.write("Math.E = ", Math.E, "<br/>");
       document.write("Math.PI = ", Math.PI, "<br/>");
+      //the methods:
+
+      //.abs() ...gets the absolute value of a number
       document.write("Math.abs(-8) = ", Math.abs(-8), "<br/>");
+
+      //.cbrt()...gets the cube root of a number
       document.write("Math.cbrt(1000) = ", Math.cbrt(1000), "<br/>");
+
+      //.ceil()...rounds a number to the ceiling (rounds up).
       document.write("Math.ceil(6.45) = ", Math.ceil(6.45), "<br/>");
+
+      //.floor()...rounds a number to the floor (rounds down).
       document.write("Math.floor(6.45) = ", Math.floor(6.45), "<br/>");
+
+      //.round()...standard round, in this case (6.45), it will round down.
       document.write("Math.round(6.45) = ", Math.round(6.45), "<br/>");
-      document.write("Math.log(10) = ", Math.log(10), "<br/>"); // Natural log
-      document.write("Math.log10(10) = ", Math.log10(10), "<br/>"); // Base 10 log
+
+      //.log()...calculates the natural logarithm.
+      document.write("Math.log(10) = ", Math.log(10), "<br/>");
+
+      //.log10()...calculates the natural logarithm to the base of 10
+      document.write("Math.log10(10) = ", Math.log10(10), "<br/>");
+
+      //.max()...gets the max value of
+      // either on of the values passed in. 10 or 5.
       document.write("Math.max(10,5) = ", Math.max(10,5), "<br/>");
+
+      //.min()...gets the min value of
+      // either on of the values passed in. 10 or 5.
       document.write("Math.min(10,5) = ", Math.min(10,5), "<br/>");
+
+      //.pow()...calculates the power of 4 by 2
       document.write("Math.pow(4,2) = ", Math.pow(4,2), "<br/>");
+
+      //.sqrt()...calculates the square root of a number.
       document.write("Math.sqrt(1000) = ", Math.sqrt(1000), "<br/>");
-      document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) + 1), ",br/>");
+
+      //there are more methods that are not covered here.
+      //refer to Mozilla Developer Network (MDN) for a complete list
+
+
+      //calulating random values...
+      document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) + 1), "<br/>");
+      document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) + 1), "<br/>");
+      document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) + 1), "<br/>");
+
+      //Converting stings to numbers
+
+      /* The Number() function converts the
+      object argument
+      to a number that represents the
+      object's value. */
+      document.write("Converted String : ", Number("3.14"), "<br/>");
+
+      /* the parseInt() function
+      parses a string and
+      returns an integer. */
+      document.write("Converted Int : ", parseInt("5"), "<br/>");
+
+      /* the parseFloat() function
+      parses a string and returns a
+      floating point number */
+      document.write("Converted Float : ", parseFloat("5.555"), "<br/>");
+
+      //...STRINGS!....
