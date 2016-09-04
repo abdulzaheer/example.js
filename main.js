@@ -179,3 +179,34 @@
       document.write("Converted Float : ", parseFloat("5.555"), "<br/>");
 
       //...STRINGS!....
+      //remember: start counting with 0 :)
+      var randStr = "A long " + "string that " + "goes on and on ";
+
+      /* caltulating String length by
+      adding the .length property
+      to the end of a variable. */
+      document.write("String Length : ", randStr.length + "<br/>"); // remember that when we count the string length we include the spaces
+
+      /* The indexOf() method returns
+      the position of the first
+      occurrence of a specified
+      value in a string. In this case
+      "goes" starts at the 19 place of our string */
+      document.write("Index for \"goes\" : ", randStr.indexOf("goes"), "<br/>");//Remember: when finding the index, begin the count with 0
+
+      //Return the value using a start and end index with the slice() method.
+      /* The slice() method extracts
+      parts of a string and returns
+      the extracted parts in a new string. */
+      document.write(randStr.slice(19, 23) + "<br/>");
+
+      //Return everything after the start index
+      document.write(randStr.slice(19) + "<br/>");
+
+      //Return the value using the start index and length with the substr() method.
+      /* The substr() method extracts
+      parts of a string, beginning at the
+      character at the specified position
+      and returns the specified
+      number of characters. */
+      document.write(randStr.substr(19, 4) + "<br/>");
