@@ -311,6 +311,128 @@
       // (condition) ? ifTrue : ifFalse
       var canIVote = (age >= 18) ? true : false;
 
-      document.write("Can I Vote : ", canIVote, "<br/>");
+      document.write("Can I Vote : ", canIVote , "<br/>");
 
       ///...LOOPING!....////
+      //looping is used anytime you want to perform a calculation
+      //a number of times as long as a condition is true
+
+      // WHILE LOOPS as long as a condition is true
+      var i = 1;
+
+      while(i <= 10){
+        document.write(i + "<br/>");
+        i++;
+
+      }
+
+      //DO WHILE is used when you must go through the loop at least once
+      do{
+        var guess = prompt("Guess a number between 1 and 20");
+      } while(guess != 15)
+
+      alert("You guessed it! 15 was a number");
+
+      //FOR LOOP
+      //A for loop is 100% self-contained looping structure. Instead of having the value outside of the loop, everything goes inside!
+      for(j = 0; j <= 20; j++){
+
+        //if j is divisible by 2 then skip back to the top of the loop
+        if((j % 2) == 0){
+          continue; //means we want to stop everything else that follows in the for loop jump back up to the loop, incement the value of j and continue on with the loop structure
+        }
+
+        // if j is equal to 15 break completely out of the loop
+        if(j === 15){
+          break;
+        }
+        document.write (j, "<br/>")
+      }
+
+      document.write("<br/>");
+
+      var customer = {name : "Bob Thomas", address : "123 Main", balance : 50.50};
+
+      //FOR IN cycles through an enumerable properties of an object
+      for(k in customer){
+        document.write(customer[k], "<br/>");
+      }
+
+      document.write("<br/>");
+
+      var customer = {name : "Johnny Jo", address : "432 Grand", balance : 20.20};
+
+      for(i in customer){
+        document.write(customer[i], "<br/>")
+      }
+
+      //...ARRAYS!...///
+      //Arrays have variable sizes and can contain multiple types in JS
+      var CrashTest = ["Test Dummy", "123 Grand", 1220.545];
+
+      document.write("<br/>");
+      //Accessing the first array item
+      document.write("Index 1: ", CrashTest[0], "<br/>");
+      document.write("Index 2: ", CrashTest[1], "<br/>");
+      document.write("Index 3: ", CrashTest[2], "<br/>");
+
+      //adding an item to an array
+      CrashTest[3] = "Grand Impala";
+      document.write("Index 4: ", CrashTest[3], "<br/>");
+
+      //Overwriting index 2 and fitting everything else after index 2 without
+      //overwritting (Put 0 for second parameter to not overwrite)
+      CrashTest.splice(2, 1, "Los Angeles", "CA");
+
+      //Deleting the 4th index item
+      CrashTest.splice(4, 1);
+
+      //Covert an array into a string (Also use toSTring())
+      document.write("Array: ", CrashTest.valueOf(),  "<br/>");
+      document.write("Array: ", CrashTest.toString(),  "<br/>");
+
+      //Covert an array into a string with separator
+      document.write("Array: ", CrashTest.join(", "), "<br/>");
+
+      //deleting an index
+      delete CrashTest[3];
+      document.write(CrashTest , "<br/>");
+
+      //sorting an array (reverse() for reverse sort)
+      //This works for sorting strings
+      CrashTest.reverse();
+      document.write(CrashTest, "<br/>");
+
+      CrashTest.sort();//based of off numerical/alphabetical sorting
+      document.write(CrashTest, "<br/>");
+      //Sorting numbers
+      var numbers = [4, 3, 9, 1, 20, 43];
+
+      //Ascending sort return x - y
+      numbers.sort(function(x, y){ return x - y });
+      document.write("Num Array: ", numbers.toString(), "<br/>");
+
+      //Descending sort return y - x
+      numbers.sort(function(x, y){ return y - x });
+      document.write("Num Array: ", numbers.toString(), "<br/>");
+
+      //combining Arrays
+      var combineArray = numbers.concat(CrashTest);
+      document.write(combineArray, "<br/>");
+      document.write(combineArray.sort(), "<br/>");
+
+      //Removing the last item
+      CrashTest.pop();
+
+      //adding items to the end 
+      CrashTest.push("34cal", "TX");
+
+      //Deleting the first item
+      CrashTest.shift();
+
+      //Adds item to the first index
+      CrashTest.unshift("Jesse James");
+
+      for(var i = 0; i < CrashTest.length; i++){
+        document.write(CrashTest[i], "<br/>");
+      }
