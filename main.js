@@ -487,4 +487,34 @@
 
       document.write("3 * 35 = ", multiply(times3, 35), "<br/>");
 
-      document.write("2 * 35 = ", multiply(times2, 35), "<br/>");
+      document.write("2 * 35 = ", multiply(times2, 35), "<br/><br/>");
+
+      //Defining a function expressions
+      //We can assign functions to variables, store them in arrays,
+      //and pass them into other functions and return them from functions
+      var triple = function(num){
+        return num * 3;
+      };
+
+      document.write("3 * 45 = ", multiply(triple, 45), "<br/>");
+      document.write("3 * 25 = ", multiply(triple, 25), "<br/>");
+      document.write("3 * 15 = ", multiply(triple, 15), "<br/>");
+      document.write("3 * 5 = ", multiply(triple, 5), "<br/>");
+      document.write(triple(3), "<br/>");
+
+      //Receiving the variable number of an argument
+      function getSum(){
+        var sum = 0;
+        for(i = 0; i < arguments.length; i++){ //the arguments object is a built-in object
+          //it is an array-like object corresponding to the arguments passed to a function.
+          sum += arguments[i];
+        }
+        return sum;
+      }
+
+      document.write("Sum Test 1: ", getSum(1, 2, 3, 4, 5), "<br/>");
+      document.write("Sum Test 2: ", getSum(45, 5, 5, 5, 5), "<br/>");
+      document.write("Sum Test 3: ", getSum(65, 2, 3, 4, 5), "<br/>");
+      document.write("Sum Test 4: ", getSum(11, 2, 3, 4, 5), "<br/>");
+      document.write("Sum Test 5: ", getSum(145, 5, 5, 5, 5), "<br/>");
+      document.write("Sum Test 6: ", getSum(165, 2, 3, 4, 5), "<br/>");
