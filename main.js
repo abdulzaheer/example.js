@@ -424,7 +424,7 @@
       //Removing the last item
       CrashTest.pop();
 
-      //adding items to the end 
+      //adding items to the end
       CrashTest.push("34cal", "TX");
 
       //Deleting the first item
@@ -436,3 +436,55 @@
       for(var i = 0; i < CrashTest.length; i++){
         document.write(CrashTest[i], "<br/>");
       }
+
+      //...FUNCTIONS!..//
+      //Functions provide code, reuse, and eliminate repetitive code.
+
+      //Define a function that checks if a value is in an array
+      function inArray(arrayToCheck, value){
+        for(i = 0; i < arrayToCheck.length; i++){
+          if(arrayToCheck[i] === value){
+            return true;
+          }
+        }
+        return false;
+      }
+
+      var randArray = [1, 2, 3, 4, 5];
+
+      document.write("In Array Test #1: ", inArray(randArray, 4), "<br/>"); // this statement returns TRUE because 4 is inside randArray.
+
+      document.write("In Array Test #2: ", inArray(randArray, 6), "<br/>"); // this statement returns FALSE because 6 is not inside randArray.
+
+      document.write("In Array Test #3: ", inArray(randArray, 54), "<br/>");
+      document.write("In Array Test #4: ", inArray(randArray, 3), "<br/>");
+
+      //Local variables defined in functions CANNOT be accessed outside of the functions
+
+      function times2(num){
+        var var2 = 2; //a local variable
+
+        return num * var2;
+      }
+      //This statement causes an error:
+      //document.write("Value of var2: ", var2, "<br/>");
+      //because var2 if a local variable to function times2()
+      document.write("7 * 2 = ", times2(7), "<br/>");//calling the times2 function with a parameter of 7
+
+      //Pass a function as a parameter
+      function times3(num){
+        return num * 3;
+      }
+      document.write("6 * 3 = ", times3(6), "<br/>");//calling the times3 function with a parameter of 6
+
+      function multiply(func, num){
+        return func(num);
+      }
+
+      document.write("2 * 15 = ", multiply(times2, 15), "<br/>");
+
+      document.write("3 * 15 = ", multiply(times3, 15), "<br/>");
+
+      document.write("3 * 35 = ", multiply(times3, 35), "<br/>");
+
+      document.write("2 * 35 = ", multiply(times2, 35), "<br/>");
