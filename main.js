@@ -553,12 +553,36 @@
 
       document.write("Each number in array divided by 3 Test3: ", divide_3([3, 6, 9, 12, 15, 18, 21]).toString(), "<br/>");
 
-      //Recursive function
-      function factorial(num){
+      //Recursive function with factorial
+      function factorial(num){ //a function is a function that calls itself
         if(num <= 1){
           return 1;
         } else{
           return num * factorial(num - 1);
         }
       }
-      document.write("Factorial of 4 : ", factorial(4), "<br/>");
+
+      document.write("Factorial of 10 : ", factorial(10), "<br/>"); //num = 10 * factorial(10) = 10 * 362880 = 3628800
+      document.write("Factorial of 9 : ", factorial(9), "<br/>"); //num = 9 * factorial(9) = 9 * 40320 = 362880
+      document.write("Factorial of 8 : ", factorial(8), "<br/>"); //num = 8 * factorial(8) = 8 * 5040 = 40320
+      document.write("Factorial of 7 : ", factorial(7), "<br/>"); //num = 7 * factorial(7) = 7 * 720 = 5040
+      document.write("Factorial of 6 : ", factorial(6), "<br/>"); //num = 6 * factorial(6) = 6 * 120 = 720
+      document.write("Factorial of 5 : ", factorial(5), "<br/>"); //num = 5 * factorial(5) = 5 * 24 = 120
+      document.write("Factorial of 4 : ", factorial(4), "<br/>"); //num = 4 * factorial(4) = 4 * 6 = 24
+      document.write("Factorial of 3 : ", factorial(3), "<br/>"); //num = 3 * factorial(3) = 3 * 2 = 6
+      document.write("Factorial of 2 : ", factorial(2), "<br/>"); //num = 2 * factorial(2) = 2 * 1 = 2
+      document.write("Factorial of 1 : ", factorial(1), "<br/>"); //num = 1 * factorial(1) = 1
+      document.write("Factorial of 0 : ", factorial(0), "<br/>");
+
+
+
+
+      ///...EVENT HANDLING!...
+      function openAlert(message){
+        alert(message);
+      }
+
+      // a link to all of the different types of events javascript
+      //http://www.w3schools.com/jsref/dom_obj_event.asp
+
+    
