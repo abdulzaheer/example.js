@@ -518,3 +518,47 @@
       document.write("Sum Test 4: ", getSum(11, 2, 3, 4, 5), "<br/>");
       document.write("Sum Test 5: ", getSum(145, 5, 5, 5, 5), "<br/>");
       document.write("Sum Test 6: ", getSum(165, 2, 3, 4, 5), "<br/>");
+
+      //Returning a variable number of arguments
+      function times_2(theArray){
+
+        var newArray =[];
+        for(i = 0; i < theArray.length; i++){
+          newArray.push(theArray[i] * 2);
+        }
+        return newArray;
+      }
+
+      document.write("Array Doubled Test 1 : ", times_2([1, 2, 3, 4, 5]).toString(), "<br/>");
+
+
+      function times_3(theArray){ //numbers in array multiplied by 3
+
+        var newArray = [];
+        for (i = 0; i < theArray.length; i++){
+          newArray.push(theArray[i] * 3);
+        }
+        return newArray;
+      }
+
+      document.write("Each array item multiplied by 3 Test 2: ", times_3([2, 1, 3, 4, 5]).toString(), "<br/>");
+
+      function divide_3(theArray){ //numbers in array divided by 3
+        var newArray = [];
+        for (i = 0; i < theArray.length; i++){
+          newArray.push(theArray[i] / 3);
+        }
+        return newArray;
+      }
+
+      document.write("Each number in array divided by 3 Test3: ", divide_3([3, 6, 9, 12, 15, 18, 21]).toString(), "<br/>");
+
+      //Recursive function
+      function factorial(num){
+        if(num <= 1){
+          return 1;
+        } else{
+          return num * factorial(num - 1);
+        }
+      }
+      document.write("Factorial of 4 : ", factorial(4), "<br/>");
