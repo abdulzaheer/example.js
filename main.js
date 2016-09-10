@@ -573,16 +573,3 @@
       document.write("Factorial of 2 : ", factorial(2), "<br/>"); //num = 2 * factorial(2) = 2 * 1 = 2
       document.write("Factorial of 1 : ", factorial(1), "<br/>"); //num = 1 * factorial(1) = 1
       document.write("Factorial of 0 : ", factorial(0), "<br/>");
-
-
-
-
-      ///...EVENT HANDLING!...
-      function openAlert(message){
-        alert(message);
-      }
-
-      // a link to all of the different types of events javascript
-      //http://www.w3schools.com/jsref/dom_obj_event.asp
-
-    
