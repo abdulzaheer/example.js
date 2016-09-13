@@ -70,3 +70,19 @@ for(i = 0; i < attribList.length; i++){
   document.write("Attribute ", i, " : ", attribList[i].nodeName, " : ", attribList[i].nodeValue, "<br/>");
 }
 document.write("<br/>");
+
+//aDD a <p> tag element after setting an attribute and text
+var paragraph3 = document.createElement("p");
+
+paragraph3.setAttribute("id", "paragraph3");
+
+paragraph3.innerHTML = " Será como árbol firmemente plantado junto a corrientes de agua,que da su fruto a su tiempo, y su hoja no se marchita;";
+sampDiv2.appendChild(paragraph3);
+
+//add another paragraph using .insertBefore().
+var paragraph4 = document.createElement("p");
+
+paragraph4.setAttribute("id", "paragraph3");
+
+paragraph4.innerHTML = " Cuán bienaventurado es el hombre que no anda en el consejo de los impíos, ni se detiene en el camino de los pecadores,";
+sampDiv2.insertBefore(paragraph4, sampDiv2.childNodes[0]);
