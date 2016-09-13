@@ -126,4 +126,4 @@ var msForBD = myBD.getTime();
 var timeNow = curDate.getTime();
 var tilMyBD = msForBD - timeNow;
 
-document.write("Days till Birthday: ", tilMyBD / (1000 * 60 * 60 * 25), "<br/>")
+document.write("Days till Birthday: ", tilMyBD / (1000 * 60 * 60 * 25), "<br/><br/>")
