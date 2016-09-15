@@ -46,3 +46,21 @@ for (var prop in cust1){//for loop
     document.write(prop, "<br/>");//doc write
   }
 }
+
+//Check if a property is in an object
+document.write("<br/> Is there a name in cust1: ", "name" in cust1, "<br/>");//name
+document.write("Is there a city in cust1: ", "city" in cust1, "<br/>");//city
+document.write("Is there a children in cust1: ", "children" in cust1, "<br/>");//children
+document.write("Is there a auto in cust1: ", "auto" in cust1, "<br/><br/>");//auto
+
+//Interacting with an object using a function
+function getInfo(cust){
+  return cust1.name + " lives at " +
+  cust1.street + " in " +
+  cust1.city + ", " +
+  cust1.state + ". Her email address is " +
+  cust1.email + " and they have a balance of $" +
+  cust1.balance + "";
+}
+
+document.write(getInfo(cust1), "<br/>");
