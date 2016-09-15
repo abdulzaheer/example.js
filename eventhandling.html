@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Event Handling JS</title>
+
+    <!-- link to styleshhet eventhandling.css file-->
+    <link rel="stylesheet" href="main.css" media="screen" title="no title">
+  </head>
+  <body>
+
+    <!-- ....CHANGING ELEMENTS & EVENT HANDLING.....-->
+    <!-- All the events can be found here http://www.w3schools.com/jsref/dom_obj_event.asp -->
+
+    <!-- INLINE JAVASCRIPT -->
+    <!-- Open an alert using onClick -->
+    <a href ="JavaScript:void(0)" onClick="alert('hello, from inline javascript');">Say Hello</a><br/> <!-- JavaScript:void(0) keeps the page from reloading...-->
+
+    <a href="JavaScript:void(0)" onClick="openAlert('Hello, from imported javascript file.');">Hi there too!</a><br/> <!--alert from the openAlert function in main.js file -->
+
+    <!-- Changing the text color on mouse
+    rollover, roll out, double click, and mouse down -->
+    <a href = "JavaScript: void(0)"
+    onmouseover="this.style.color='red';"
+    onmouseout="this.style.color='green'"
+    ondblclick="this.text='This is what happens when you double click me.'"
+    onmousedown="this.text='Hey, hey. Easy on the steroids.'"
+    onmouseup="this.text='Thank you.'"> Inline javascript...didn't know there was such a thing?!
+    </a><br/>
+
+    <!-- Getting value in an input element and open alert on change. -->
+    <input type="text" id="randInput" onchange="var dataEntered=document.getElementById('randInput').value; alert('User Typed: ' + dataEntered)"><br/> <!-- no semicolon needed at end o alert function ??!! -->
+    <input type="text" id="snag" onchange="var text=document.getElementById('snag').value; alert('You typed: ' + text)"><br/><br/>
+
+    <!-- When a user clicks a key provide info on the key clicked -->
+    <form action="#" id="sampForm">
+      <input id="charInput" type="text" placeholder="Type something here!">
+      <p id="keyData">Key Data Here</p>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form><br/>
+
+    <img src="printlogo.png" alt="printlogo" id="logo"/>
+    <button id="logoButton">GetLogo</button><br/><br/>
+    <input id="mouseInput" type="text" size="30"><br/><br/>
+
+    Mouse X: <input type="text" id="mouseX"><br/>
+    Mouse Y: <input type="text" id="mouseY"><br/>
+
+    <button id="clearInputs">Clear Inputs</button><br/><br/>
+
+    <!-- tag used for EVENT HANDLING & ELEMENT CHANGE-->
+    <script src="eventhandling.js"></script>
+  </body>
+</html>

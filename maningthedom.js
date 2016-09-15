@@ -29,7 +29,7 @@ document.getElementById('reload').onclick = function(event){
 
 //you can get all <p> tags and then target them like an array.
 var pElements = document.getElementsByTagName('p');
-pElements[3].style.backgroundColor = "#EFDECD";
+pElements[0].style.backgroundColor = "#EFDECD";
 
 //targeting the HTML
 document.childNodes[1].style.backgroundColor = "pink";
@@ -64,6 +64,7 @@ nttLogo2.setAttribute("alt", "NTT Logo2");
 //Get attribute
 document.write("Logo alt value: ", nttLogo2.getAttribute("alt"), "<br/><br/>");
 
+//Get all attributes and print them
 var attribList = document.getElementById('logo2').attributes;
 
 for(i = 0; i < attribList.length; i++){
@@ -77,12 +78,13 @@ var paragraph3 = document.createElement("p");
 paragraph3.setAttribute("id", "paragraph3");
 
 paragraph3.innerHTML = " Será como árbol firmemente plantado junto a corrientes de agua,que da su fruto a su tiempo, y su hoja no se marchita;";
+
 sampDiv2.appendChild(paragraph3);
 
-//add another paragraph using .insertBefore().
+//added another paragraph with .createElement()
 var paragraph4 = document.createElement("p");
-
 paragraph4.setAttribute("id", "paragraph3");
 
+//Insert the element before the 1st Child using .insertBefore() method
 paragraph4.innerHTML = " Cuán bienaventurado es el hombre que no anda en el consejo de los impíos, ni se detiene en el camino de los pecadores,";
 sampDiv2.insertBefore(paragraph4, sampDiv2.childNodes[0]);
